@@ -14,12 +14,8 @@ public class Interweave {
 			//add any number of elements to first arraylist
 			a1.add(5);
 			a1.add(6);
-			a1.add(54);
-			a1.add(10);
-			
-			
-			
-			
+		
+		
 			//prints first arraylist
 			System.out.print("Array 1: ");
 			for(int i=0;i<a1.size();i++)
@@ -46,6 +42,7 @@ public class Interweave {
 			
 			interweave(a1,a2);
 			
+			//prints interweaved arraylist
 			for(int i=0;i<a1.size();i++)  
 			{
 				System.out.print(a1.get(i)+"  ");
@@ -61,18 +58,18 @@ public class Interweave {
 				
 				for(int i=1;i<a1.size();i+=2)
 				{
-					a1.add(i,a2.get(index2)); //first arraylist has elements of second arraylist in every other index
+					a1.add(i,a2.get(index2)); //arraylist 1 has elements of arraylist 2 added in every other index
 					index2++;
 					
 				}
 				while(index2!=a2.size())
 			{
-				a1.add(a2.get(index2)); //the rest of arraylist 2 is printed because arraylist has a smaller size
+				a1.add(a2.get(index2)); //the rest of arraylist 2 is printed because arraylist 1 has a smaller size
 				index2++;
 			}
 			}
 			
-			else  //this works when arraylists have equal size, or when first arraylist is larger
+			else  //this works when arraylists have equal size, or when first arraylist is longer
 			{ 
 				int index1=1;
 			
